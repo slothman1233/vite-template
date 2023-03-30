@@ -20,6 +20,8 @@ module.exports = {
     'prettier/prettier': 'error',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
+    'vue/no-unused-components': 'warn', // 当存在定义而未使用的组件时，关闭报错
+    'no-unused-vars': 'warn', // 当存在定义而未使用的变量时，关闭报错
     '@typescript-eslint/ban-types': [
       'error',
       {
