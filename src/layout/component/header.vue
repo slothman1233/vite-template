@@ -15,7 +15,6 @@
 </template>
 
 <script lang="ts">
-  import { computed, reactive, toRefs, watch } from 'vue';
   import { useStore } from 'store/index';
   interface State {
     isCollapseWidth: boolean;
