@@ -1,6 +1,8 @@
 import { App, InjectionKey } from 'vue';
 import { createStore, useStore as baseUseStore, Store } from 'vuex';
 import { RootStateTypes } from './interface/index';
+// 引入vuex持久化方法createPersistedState
+import createPersistedState from 'vuex-persistedstate';
 // The import.meta object exposes context-specific metadata to a JavaScript module.
 // It contains information about the module, like the module 's URL.
 // https://developer.mozilla.org/zh-cn/docs/web/javascript/reference/statements/import.meta
@@ -29,6 +31,13 @@ const store = createStore<RootStateTypes>({
   modules,
   getters,
   strict: false,
+  plugins: [
+    createPersistedState({
+      storage: window.localStorage,
+      key: 'rabbitstore-client',
+      // paths: ["app"],
+    }),
+  ],
 });
 
 // 将类型注入useStore
