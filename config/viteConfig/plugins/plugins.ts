@@ -13,7 +13,12 @@ import configLegacyPlugin from './configLegacyPlugin';
 
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+import {
+  ElementPlusResolver,
+  AntDesignVueResolver,
+  VantResolver,
+} from 'unplugin-vue-components/resolvers';
+
 // 以下钩子在服务器启动时被调用：
 // options
 // buildStart
@@ -58,7 +63,7 @@ export default (isBuild: boolean, mode: viteMode, viteEnv: ImportMetaEnv) => {
       ],
       imports: ['vue', 'vue-router'],
       dts: 'types/auto-imports.d.ts',
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver(), VantResolver(), AntDesignVueResolver()],
       eslintrc: {
         enabled: true, // Default `false`
         filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
@@ -77,7 +82,7 @@ export default (isBuild: boolean, mode: viteMode, viteEnv: ImportMetaEnv) => {
       // 生成自定义 `auto-components.d.ts` 全局声明
       dts: 'types/auto-components.d.ts',
       // 自定义组件的解析器
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver(), VantResolver(), AntDesignVueResolver()],
       exclude: [/[\\/]node_modules[\\/]/],
     }),
 

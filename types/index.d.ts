@@ -27,7 +27,6 @@ declare type ElRef<T extends HTMLElement = HTMLDivElement> = Nullable<T>;
 
 declare type Recordable<T = any> = Record<string, T>;
 
-
 // declare module 'path-browserify'
 // declare module 'nprogress'
 declare module '@iconify/vue';

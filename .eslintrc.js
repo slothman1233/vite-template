@@ -10,7 +10,7 @@ module.exports = {
     'prettier',
     '@vue/prettier',
     '@vue/prettier/@typescript-eslint',
-    './.eslintrc-auto-import.json',
+    './.eslintrc-auto-import.json'
   ],
   plugins: ['prettier'],
   parserOptions: {
@@ -32,7 +32,18 @@ module.exports = {
         },
       },
     ],
-    'vue/multi-word-component-names': 0,
+    '@typescript-eslint/ban-ts-comment': [
+      'error',
+      {
+        'ts-ignore': false,
+      },
+    ],
+    'vue/multi-word-component-names': [
+      'error',
+      {
+        ignores: [],
+      },
+    ],
   },
   overrides: [
     {

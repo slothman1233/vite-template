@@ -1,8 +1,11 @@
 import { App, InjectionKey } from 'vue';
 import { createStore, useStore as baseUseStore, Store } from 'vuex';
 import { RootStateTypes } from './interface/index';
+
 // 引入vuex持久化方法createPersistedState
 import createPersistedState from 'vuex-persistedstate';
+import { createLogger } from 'vuex'
+
 // The import.meta object exposes context-specific metadata to a JavaScript module.
 // It contains information about the module, like the module 's URL.
 // https://developer.mozilla.org/zh-cn/docs/web/javascript/reference/statements/import.meta
@@ -32,10 +35,23 @@ const store = createStore<RootStateTypes>({
   getters,
   strict: false,
   plugins: [
+    createLogger(),
     createPersistedState({
       storage: window.localStorage,
       key: 'rabbitstore-client',
       // paths: ["app"],
+      // 当state中的值发生变化的时候出发reduce函数
+    //   reducer(val:any)  {
+    //     console.log(val)  // value值为当前state中的所有值对象
+    //     // return什么，localstorage中的key值为vuex的value值就是什么，而且是实时与state中的值保持同步
+    //     store.state.app.count = val.app;
+    //     return {
+    //         count: val.count || 0,
+    //         // computedCount: val.computedCount,
+    //         app:val.app,
+    //         aa: 1
+    //     }
+    // }
     }),
   ],
 });

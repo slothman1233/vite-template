@@ -7,7 +7,7 @@ import { setupElementPlus } from './common/utils/libs/element';
 import { setupVant } from './common/utils/libs/vant';
 import { setupStore } from './store';
 
-import './styles/plugin/index.less';
+// import './styles/plugin/index.less';
 import './styles/public/index.less';
 // import { setupGlobalCom } from 'comps/index';
 import 'virtual:svg-icons-register';

@@ -18,5 +18,6 @@ export function wrapperEnv(envConf: Recordable): ImportMetaEnv {
     ret[envName] = realName;
     process.env[envName] = realName;
   }
+
   return ret;
 }

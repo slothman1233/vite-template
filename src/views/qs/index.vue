@@ -19,7 +19,6 @@
 
 <style lang="less">
   body {
-    color: @FontColor_1;
     display: flex;
   }
 </style>

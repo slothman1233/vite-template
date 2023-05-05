@@ -13,15 +13,23 @@
     <elButton type="success">Su151ccess</elButton>
     <elButton type="info">Inf45o</elButton>
     <elButton type="warning">War3ning</elButton>
-    <elButton type="danger">Danger</elButton>
+    <elButton type="danger">Dang123er</elButton>
     <elButton>中文1</elButton>
+ 
+    <ElFooter>asdf</ElFooter>
+
+    <a-affix>sdfasd</a-affix>
+
+    <a-button>asdfas</a-button>
   </el-row>
 
   <van-button type="default">默认按钮</van-button>
   <van-button type="primary">主要按钮</van-button>
   <!-- <van-button type="info">信息按钮</van-button> -->
   <van-button type="warning">警告按钮</van-button>
-  <van-button type="danger">危险按钮</van-button>
+  <VanButton type="danger">危险按钮</VanButton>
+
+  <VanActionBar>12</VanActionBar>
   <button type="button" @click="count++">count is: {{ count }}</button>
   <!-- <p>
     Edit

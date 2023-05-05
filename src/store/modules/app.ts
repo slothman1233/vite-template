@@ -9,7 +9,7 @@ export interface State {
 const app: Module<App, RootStateTypes> = {
   state() {
     return {
-      count: 0,
+      count: 0
     };
   },
   mutations: {
