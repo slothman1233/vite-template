@@ -72,6 +72,7 @@ docker run -d -p :5000:5050  op:1
 │   │   ├── config 针对客户端的环境配置文件夹
 │   │   ├── utils 通用文件夹
 │   │   │   ├── libs 插件的文件夹(默认注入了element、vant和antd)
+│   │   │   ├── eventbus 事件总线(mitt 全局的观察者)
 │   │   │   └── index.less 全局注入的样式
 │   ├── components 组件文件夹 (文件夹名为组件名---只有文件夹下的index.ts的default为对应的组件方法)
 │   │   ├── SvgIcon    svg组件 
