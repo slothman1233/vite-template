@@ -7,8 +7,8 @@ import env from '../../../src/common/config/mock';
 
 // eslint-disable-next-line no-global-assign, @typescript-eslint/ban-ts-comment
 // @ts-ignore
-window = {};
-window.configModel = env;
+// window = {};
+// window.configModel = env;
 export default function configMockPlugin(
   useMock = true,
   isBuild: boolean,
